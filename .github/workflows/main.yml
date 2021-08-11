@@ -25,7 +25,7 @@ jobs:
         context: ./
         push: true
         file: ./Dockerfile
-        tags: ${{ secrets.DOCKER_USERNAME }}/radio_free_europe:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.repository }}:latest
         labels: |
           org.opencontainers.image.revision=${{ github.sha }}
           org.opencontainers.image.source=Dockerfile
