@@ -25,7 +25,7 @@ jobs:
         context: ./
         push: true
         file: ./Dockerfile
-        tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.repository }}:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:latest
         labels: |
           org.opencontainers.image.revision=${{ github.sha }}
           org.opencontainers.image.source=Dockerfile
